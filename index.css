@@ -1,0 +1,141 @@
+*,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-size: 100%;
+    font-family: "Inter", sans-serif;
+}
+.root {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('bg.jpg');
+    display: grid;
+    place-items: center;
+}
+.music_player-section {
+    width: 21.625rem;
+    padding: 1.25rem;
+    background-color: rgba(18, 24, 38, 0.6);
+    border-radius: 1.25rem;
+}
+.music_img-container {
+    position: relative;
+}
+.music-img{
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.film-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    color: #4D5562;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+.music_title {
+    font-size: 1rem;
+    color: #E5E7EB;
+    text-align: center;
+    margin-top: 1rem;
+}
+.music_composer {
+    font-size: 0.75rem;
+    color: #4D5562;
+    text-align: center;
+    margin-top: 0.25rem;
+}
+.music_progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.music_spans-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.music_spans-container > span {
+    font-size: 0.625rem;
+    color: #4D5562;
+}
+#music_progress-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 0.25rem;
+    background-color: #E5E7EB;
+    border-radius: 0.25rem;
+    position: relative;
+}
+#music_progress-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; 
+    background-color: #C93B76;
+}
+#music_progress-range::before {
+    content: ' ';
+    height: 100%;
+    width: var(--before-width, 0px);
+    background-color: #C93B76;
+    z-index: 1;
+    display: block;
+    position: absolute;
+}
+.music_controls-container {
+    margin-top: 2.25rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.music_controls-container > button {
+    cursor: pointer;
+}
+.left_right-btn {
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    border: none;
+}
+.back-btn {
+    transform: rotate(180deg);
+}
+.center-btn {
+    background-color: #C93B76;
+    border-radius: 3.13rem;
+    border: none;
+    width: 3.13rem;
+    height: 3.13rem;
+    display: grid;
+    place-items: center;
+    transition: all 150ms ease-in-out;
+}
+.center-btn > img {
+    width: 32px;
+    height: auto;
+    object-fit: cover;
+}
+.center-btn:hover {
+    box-shadow: 1px 2px 5px 1px #C93B76;
+}
+.center-btn > .pause-btn {
+    width: 1rem;
+}
